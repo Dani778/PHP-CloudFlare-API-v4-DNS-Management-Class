@@ -1,4 +1,4 @@
-# PHP CloudFlare API v4-DNS Management Class
+# PHP CloudFlare API v4 DNS Management Class
 Light-weight &amp; easy class written in PHP to manage DNS in Cloudflare
 
 ## Features:
