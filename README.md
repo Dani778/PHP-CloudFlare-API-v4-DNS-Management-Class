@@ -71,7 +71,6 @@ $result = $api -> getRecordInfo($name);
 #### Return:
 - Array :
 ```php
-
 $return = [
   "id",
   "type",
@@ -92,7 +91,6 @@ $result = $api -> ListAllRecords();
 #### Return:
 - Multidimensional Array :
 ```php
-
 $return[index of table] = [
 	"id"
 	"type"
