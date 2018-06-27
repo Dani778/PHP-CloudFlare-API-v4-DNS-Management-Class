@@ -10,9 +10,11 @@ Light-weight &amp; easy class to manage Your DNS Records using CloudFlare API v4
 * Record details
 * List All Records In Zone
 
-## Documentation
+# Documentation
 
-### Getting Started
+
+
+## Getting Started
 
 To start working with class we must require class file
 
@@ -34,30 +36,31 @@ This function have one parameter what is $domain_name
 ```php
 $api -> setZone("example.com");
 ```
-### Functions
+## Functions
 
-#### Get Zone ID
+### Get Zone ID
 
 ```php
 $result = $api -> getZoneID($domain_name);
 ```
 
-##### Parameters:
-- $domain_name ex. example.com
+#### Parameters:
+- $domain_name - Domain Name ex. example.com
 
-##### Return:
+#### Return:
 - Zone ID
 
-#### Record Details
+### Record Details
 
 ```php
 $result = $api -> getRecordInfo($name);
 ```
 
-##### Parameters:
-- $name ( of record ) ex. www.example.com
 
-##### Return:
+#### Parameters:
+- $name - Name of record  ex. www.example.com
+
+#### Return:
 - Array :
 ```php
 
@@ -72,6 +75,73 @@ $return = [
 ];
 ```
 
+### List All Records
+
+```php
+$result = $api -> ListAllRecords();
+```
+
+#### Return:
+- Multidimensional Array :
+```php
+
+$return[index of table] = [
+	"id"
+	"type"
+	"name"
+	"content"
+	"proxied"
+	"ttl" 
+];
+```
+
+### Add Record
+
+```php
+$result = $api -> AddRecord($type,$name,$content,$ttl,$cloudflare_proxy);
+```
+
+
+#### Parameters:
+- $type - Record Type
+- $name - Record Name
+- $content - Record Content
+- $ttl - 1 for auto
+- $cloudflare_proxy - CloudFlare proxy , true is yes , false is no
+
+#### Return:
+- Boolean true/false 
+
+### Edit Record
+
+```php
+$result = $api ->  EditRecord($old_name,$type,$name,$content,$ttl,$cloudflare_proxy);
+```
+
+
+#### Parameters:
+- $old_new - Old Record Name
+- $type - Record Type
+- $name - New Record Name
+- $content - Record Content
+- $ttl - 1 for auto
+- $cloudflare_proxy - CloudFlare proxy , true is yes , false is no
+
+#### Return:
+- Boolean true/false 
+
+### Delete Record
+
+```php
+$result = $api ->  DeleteRecord($name);
+```
+
+
+#### Parameters:
+- $name - Record Name
+
+#### Return:
+- Boolean true/false 
 
 
 
