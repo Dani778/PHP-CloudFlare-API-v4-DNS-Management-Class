@@ -36,6 +36,14 @@ This function have one parameter what is $domain_name
 ```php
 $api -> setZone("example.com");
 ```
+!!!! IMPORTANT !!!!
+
+Off error reporting because class sometimes generates notice
+
+```php
+error_reporting(0);
+```
+
 ## Functions
 
 ### Get Zone ID
