@@ -22,15 +22,15 @@ To start working with class we must require class file
 require_once( __DIR__ . "cloud.php" );
 ```
 
-Now we have included class file but we must create class object
-We have two params in object constructor , $mail is Your email which used to create CloudFlare account and
-$apikey is You CloudFlare Api Key which you can retrieve from Your CloudFlare dashboard
+Now we have included class file, but we must create class object.
+We have two params in object constructor, $mail is Your email which used to create CloudFlare account and
+$apikey is Your CloudFlare api key which you can retrieve from Your CloudFlare dashboard
 
 ```php
 $api = new CloudFlareAPI($mail,$apikey);
 ```
-In Order to manage records we must select zone.
-We do this with function setZone().
+In order to manage records we must select zone.
+We can do this with function setZone().
 This function have one parameter what is $domain_name
 
 ```php
