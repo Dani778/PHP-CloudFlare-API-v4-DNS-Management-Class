@@ -23,8 +23,8 @@ require_once( __DIR__ . "cloud.php" );
 ```
 
 Now we have included class file, but we must create class object.
-We have two params in object constructor, $mail is Your email which used to create CloudFlare account and
-$apikey is Your CloudFlare api key which you can retrieve from Your CloudFlare dashboard
+We have two params in object constructor, $mail is your email which used to create CloudFlare account and
+$apikey is your CloudFlare api key which you can retrieve from your CloudFlare dashboard
 
 ```php
 $api = new CloudFlareAPI($mail,$apikey);
